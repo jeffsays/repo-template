@@ -1,0 +1,33 @@
+# Ignore build artifacts
+/dist/
+/lib/
+/var/
+/coverage/
+
+# Ignore .yarn
+.yarn/
+
+# lockfiles
+**/package-lock.json
+**/pnpm-lock.yaml
+**/yarn.lock
+
+# github
+**/.gitattributes
+**/.gitignore
+/.github/
+
+.husky/
+.idea/
+node_modules/
+
+changelog
+
+# config files
+.editorconfig
+.node-version
+.nvmrc
+.prettierignore
+.shellcheckrc
+.yamllint.yml
+.yarnrc.yml

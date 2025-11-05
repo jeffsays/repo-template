@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["./node_modules/@jeffsays/tsconfig/tsconfig.nodenext.json"],
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+  },
+  "include": [
+    "${configDir}/src/**/*.ts"
+  ],
+  "exclude": [
+    "${configDir}/.markdownlint-cli2.js",
+    "${configDir}/commitlint.config.ts",
+    "${configDir}/eslint.config.ts",
+    "${configDir}/jest.config.ts",
+    "${configDir}/lint-staged.config.ts"
+  ]
+}
