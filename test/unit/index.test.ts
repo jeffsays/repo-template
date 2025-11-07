@@ -1,7 +1,8 @@
 /** @file - Example test file */
 
 import { describe, expect, it } from "@jest/globals";
-import * as EmptyModule from "../../src/index.js";
+/* eslint-disable-next-line import-x/namespace -- just example purposes */
+import * as EmptyModule from "../../src";
 
 describe("index", () => {
   it("should be importable and represent an empty module", () => {

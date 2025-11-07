@@ -1,7 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@jeffsays/tsconfig/test"],
-  "compilerOptions": {
-    "strictNullChecks": true
-  }
+  "extends": ["@jeffsays/tsconfig/esnext", "@jeffsays/tsconfig/test"],
+  "include": [
+    "${configDir}/src/**/*.ts",
+    "${configDir}/test/**/*.ts",
+    "${configDir}/test/**/*.test.ts"
+  ]
 }

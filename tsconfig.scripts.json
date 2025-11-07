@@ -1,7 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@jeffsays/tsconfig/scripts"],
+  "extends": ["@jeffsays/tsconfig/scripts", "@jeffsays/tsconfig/esnext"],
   "compilerOptions": {
+    "noEmit": true,
     "strictNullChecks": true
   }
 }

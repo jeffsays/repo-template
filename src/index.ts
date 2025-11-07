@@ -1,3 +1,4 @@
 /** @file - Template index.ts */
 
-export default {};
+/* eslint-disable-next-line unicorn/require-module-specifiers -- just example purposes */
+export {};

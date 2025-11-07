@@ -1,16 +1,15 @@
 /** @jest-config-loader ts-node */
 /** @jest-config-loader-options {"transpileOnly": true} */
 
-import type { Config } from "jest";
 import { defaults } from "jest-config";
-import { createDefaultEsmPreset } from "ts-jest";
+import { createDefaultEsmPreset, type DefaultEsmPreset, type JestConfigWithTsJest } from "ts-jest";
 
-const presetConfig = createDefaultEsmPreset({
+const presetConfig: DefaultEsmPreset = createDefaultEsmPreset({
   // coverage
   collectCoverage: true,
-  collectCoverageFrom: ["./src/**/*.ts"],
+  collectCoverageFrom: ["src/**/*.(t|j)s"],
   coverageDirectory: "var/coverage/test",
-  coveragePathIgnorePatterns: ["/node_modules/", "/dist/"],
+  coveragePathIgnorePatterns: ["<rootDir>/dist/", "<rootDir>/node_modules/"],
   coverageReporters: ["json-summary", "text", "lcov"],
   coverageThreshold: {
     global: {
@@ -27,43 +26,59 @@ const presetConfig = createDefaultEsmPreset({
   resetMocks: true,
 
   // module
-  moduleDirectories: [...defaults.moduleDirectories, ".", "node_modules"],
+  moduleDirectories: [...defaults.moduleDirectories, "<rootDir>/node_modules", "src"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
-  // moduleNameMapper: ,
-  modulePathIgnorePatterns: ["<rootDir>/dist/"],
+  moduleNameMapper: {
+    "^(\\.{1,2}/.*)\\.js$": "$1",
+    "^@src/(.*)$": "<rootDir>/src/$1", // Example for an alias @src
+  },
+  modulePathIgnorePatterns: ["<rootDir>/dist/", "<rootDir>/node_modules/"],
 
   // environment
   extensionsToTreatAsEsm: [".mts", ".ts"],
   globals: {
     "ts-jest": {
       isolatedModules: true,
+      tsconfig: "<rootDir>/tsconfig.test.json",
+      useESM: true,
     },
   },
-  // preset: "ts-jest",
+  preset: "ts-jest/presets/default-esm",
   resolver: "ts-jest-resolver",
+  rootDir: ".",
 
   testEnvironment: "node",
   testMatch: ["**/*.test.ts"],
   testPathIgnorePatterns: ["/dist/", "/node_modules/"],
   transform: {
-    "^.+\\.(ts|tsx)$": [
+    "^.+\\.tsx?$": [
       "ts-jest",
       {
         diagnostics: {
           pretty: true,
         },
         isolatedModules: true,
-        tsconfig: "tsconfig.test.json",
+        tsconfig: "<rootDir>/tsconfig.test.json",
         useESM: true,
       },
     ],
   },
 
   // other
-  reporters: [["github-actions", { silent: false }], "summary"],
+  reporters: [
+    [
+      "github-actions",
+      {
+        silent: false,
+      },
+    ],
+    "summary",
+  ],
   verbose: true,
 });
 
-export default {
+const jestConfig: JestConfigWithTsJest = {
   ...presetConfig,
-} satisfies Config;
+};
+
+export default jestConfig;

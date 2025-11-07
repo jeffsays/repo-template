@@ -1,15 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@jeffsays/tsconfig/nodenext"],
+  "extends": ["@jeffsays/tsconfig/esnext"],
   "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
     "noEmit": true
   },
   "include": [
-    "commitlint.config.ts",
-    "eslint.config.ts",
-    "jest.config.ts",
-    "lint-staged.config.ts"
+    "${configDir}/.markdownlint-cli2.js",
+    "${configDir}/commitlint.config.ts",
+    "${configDir}/eslint.config.ts",
+    "${configDir}/jest.config.ts",
+    "${configDir}/lint-staged.config.ts"
   ]
 }

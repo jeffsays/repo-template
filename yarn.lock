@@ -1593,9 +1593,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jeffsays/eslint@npm:^0.0.30":
-  version: 0.0.30
-  resolution: "@jeffsays/eslint@npm:0.0.30"
+"@jeffsays/eslint@npm:^0.0.39":
+  version: 0.0.39
+  resolution: "@jeffsays/eslint@npm:0.0.39"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:^4.4.1"
     "@eslint/config-helpers": "npm:^0.4.2"
@@ -1680,24 +1680,32 @@ __metadata:
     typescript-eslint: ^8.46.2
     typescript-eslint-language-service: ^5.0.5
     yaml-eslint-parser: ^1.3.0
-  checksum: 10c0/0a67b68965dcdc60dfae3d215ce9870f867086e461bb80c5c5167f759f5e1a4b99e5c3221330f2b435ebdb70f18d7a58fd861c670c4e256f6f92e5b193275ddb
+  checksum: 10c0/c2a2dd1286f9dd1ed183b32b1e5b32b52f94275c681f376cdb4b7238334e0dc5399ec60968b71260db716e692f0b957bef748dc4629e288714451c1751788574
   languageName: node
   linkType: hard
 
-"@jeffsays/lint-staged@npm:^0.0.14":
-  version: 0.0.14
-  resolution: "@jeffsays/lint-staged@npm:0.0.14"
+"@jeffsays/get-package-manager@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@jeffsays/get-package-manager@npm:0.0.1"
+  checksum: 10c0/2b6dd10199d6e53168852fcd44450e893b146793c334c81acccdabfe473808fde1ae6578525f612a10a9b89b385fe9879ee32d4e925a0afb4ab25dfef24b90f2
+  languageName: node
+  linkType: hard
+
+"@jeffsays/lint-staged@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "@jeffsays/lint-staged@npm:0.0.16"
   dependencies:
+    "@jeffsays/get-package-manager": "npm:^0.0.1"
     lint-staged: "npm:^16.2.6"
   peerDependencies:
     lint-staged: ^16.2.6
-  checksum: 10c0/0f2ee32ec74f2f3c1341442de16cf1782e8b5e3b8a79e4e7241f185c152dea6423dec15267c966e2b7269431c8903b3ac4384d38e91ab09e13c693a056fa6873
+  checksum: 10c0/9e80dff1b1fecb839d6821d1c9478b6de8dcb7e9162af5e845ae2b0b4a70bfd36f04567fc30f4ee6cfdb57e75d00ac343aa41aa758afe2de066259bc32991ff5
   languageName: node
   linkType: hard
 
-"@jeffsays/markdownlint-cli2@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@jeffsays/markdownlint-cli2@npm:0.0.3"
+"@jeffsays/markdownlint-cli2@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@jeffsays/markdownlint-cli2@npm:0.0.4"
   dependencies:
     "@github/markdownlint-github": "npm:^0.8.0"
     "@silvermine/markdownlint-rule-indent-alignment": "npm:^0.2.0"
@@ -1723,7 +1731,7 @@ __metadata:
     markdownlint-rule-max-one-sentence-per-line: ^0.0.2
     markdownlint-rule-no-trailing-slash-in-links: ^0.0.2
     markdownlint-rule-relative-links: ^4.0.1
-  checksum: 10c0/646f84677c03fc9dd1ec41ef2b00db2897324c6e83c1fb27d11de574280d4109c586936772ff457ce6351d7c139e5804e4747194444efb65b1cddd6d16a8dfcf
+  checksum: 10c0/e68869f948d4b5b45305076c8f633acb3fe99f57b95ec8d915d73e3b6e8a4c9ff98e3f64eefa80b2ab9f0f52b7d14770f4ed9180a8e2d31fd53377852485b874
   languageName: node
   linkType: hard
 
@@ -1779,10 +1787,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jeffsays/tsconfig@npm:^0.0.5":
-  version: 0.0.5
-  resolution: "@jeffsays/tsconfig@npm:0.0.5"
-  checksum: 10c0/7546a3273179dec5de9cb62206fa72c1f925b16701caea8394dce7910c6b9cd9d1d230312f08282f87e54f877715c07daf13a72051fd5ab446e8ca3615a7b681
+"@jeffsays/tsconfig@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@jeffsays/tsconfig@npm:0.0.6"
+  checksum: 10c0/40a7909124328e2bdb18f76423bf28ffc5c49efb73b0a9e275a218dbe83556b1e82bfa12f1e32c076a7302e5a32addf1960c8e8015d11738a2a8428ef5bf05fd
   languageName: node
   linkType: hard
 
@@ -9937,12 +9945,12 @@ __metadata:
     "@jeffsays/cfn-lint": "npm:^0.0.0"
     "@jeffsays/commitlint": "npm:^0.0.3"
     "@jeffsays/editorconfig": "npm:^0.0.0"
-    "@jeffsays/eslint": "npm:^0.0.30"
-    "@jeffsays/lint-staged": "npm:^0.0.14"
-    "@jeffsays/markdownlint-cli2": "npm:^0.0.3"
+    "@jeffsays/eslint": "npm:^0.0.39"
+    "@jeffsays/lint-staged": "npm:^0.0.16"
+    "@jeffsays/markdownlint-cli2": "npm:^0.0.4"
     "@jeffsays/prettier": "npm:^0.0.25"
     "@jeffsays/shellcheck": "npm:^0.0.0"
-    "@jeffsays/tsconfig": "npm:^0.0.5"
+    "@jeffsays/tsconfig": "npm:^0.0.6"
     "@jeffsays/tsdoc": "npm:^0.0.0"
     "@jeffsays/yamllint": "npm:^0.0.0"
     "@jest/globals": "npm:^30.2.0"
